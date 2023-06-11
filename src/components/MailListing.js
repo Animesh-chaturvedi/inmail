@@ -22,14 +22,11 @@ function MailListing() {
     switch (location.pathname) {
       case "/filter":
         {
-          console.log(appliedTag);
-          console.log(StoreState, "State");
           setFilteredMail(handleFilterMail(StoreState.mails.mails, appliedTag));
         }
         break;
       case "/search":
         {
-          console.log(searchTerm);
           setFilteredMail(handleSearchMail(StoreState.mails.mails, searchTerm));
         }
         break;
