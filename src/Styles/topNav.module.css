@@ -1,0 +1,53 @@
+.TopNavCont {
+  line-height: 40px;
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  border-radius: 10px;
+  position: sticky;
+  top: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  @media (max-width: 900px) {
+    min-width: 100vw;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+}
+.logo {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 800;
+  text-align: center;
+  margin: 2rem 0rem;
+  background: linear-gradient(to right, #ab56ec, #2849e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: 900px) {
+    margin: 0rem 0.5rem;
+  }
+}
+.innerCont {
+  width: 100%;
+  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  margin: 0rem 0.5rem;
+}
+.openModal {
+  margin: 0rem 0.5rem;
+  eight: inherit;
+  line-height: inherit;
+  float: right;
+  border: none;
+  padding: 0px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #5622ff;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  border-radius: 10px;
+}

@@ -1,0 +1,99 @@
+.outerCont {
+  overflow: scroll;
+  max-height: 90vh;
+  margin: 0rem 1rem;
+  border-radius: 10px;
+  margin-top: 2px;
+  @media (max-width:900px) {
+    max-height: 82vh;
+  }
+  @media (max-width:500px) {
+    max-height: 85vh;
+  }
+  
+}
+.mailsCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 8px;
+  line-height: 44px;
+  letter-spacing: 0px;
+  overflow: scroll;
+  
+  border-radius: 10px;
+  background-color: white;
+  z-index: 1;
+  transition-duration:.5s;
+  border-left: 0px solid #5622ff;
+    padding: 1rem 2rem 1rem 2rem;
+  &:hover {
+    transform: scale(1.01);
+    background-color: white;
+    border-left: 25px solid #5622ff;
+    transition-duration:.3s;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 11px -13px rgba(46, 45, 46, 1);
+  -moz-box-shadow: 0px 0px 11px -13px rgba(46, 45, 46, 1);
+  box-shadow: 0px 0px 8px -2px rgba(46, 45, 46, 1);
+  }
+  @media (max-width:500px) {
+    flex-direction: column;
+    padding: .75rem 1rem .75rem 1rem;
+  }
+}
+.mailLeft {
+  display: flex;
+  width: 20%;
+  min-width: 150px;
+}
+.mailRight {
+  width: 75%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  flex-wrap: nowrap;
+  @media (max-width:500px) {
+    width:100%;    
+  }
+}
+.tag {
+  font-size: 14px;
+  color: white;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  border-radius: 5px;
+  margin: auto 2rem;
+  line-height: 20px;
+}
+.name {
+  min-width: 35%;
+  text-overflow: ellipsis;
+  display: block;
+  flex-wrap: nowrap;
+  margin: auto 0rem;
+  
+}
+.inbox-tag {
+  background-color: green;
+}
+.trash-tag {
+  background-color: red;
+}
+.spam-tag {
+  background-color: gray;
+}
+.draft-tag {
+  background-color: rgba(224, 190, 18, 0.917);
+}
+
+.noResult{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 3rem;
+}
+.Loading{
+    text-align: center;
+}
