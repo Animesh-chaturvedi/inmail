@@ -1,23 +1,19 @@
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  redirect,
-  useHistory,
-  useLocation,
   Navigate,
   
 } from "react-router-dom";
-import { getMailsFetch, getMailsFilter } from "./mailState";
+import { getMailsFetch } from "./mailState";
 import MailListing from "./components/MailListing";
 import NoMatch from "./components/NoMatch";
 import SideNav from "./components/SideNav";
-import SearchBar from "./components/SearchBar";
 import FullMail from "./components/FullMail";
 import TopNav from "./components/TopNav";
+import { mailsStateVal } from "./mailState";
 
 import './App.css'; 
 

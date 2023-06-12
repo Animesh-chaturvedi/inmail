@@ -5,7 +5,6 @@ import { mailsStateVal } from "../mailState";
 import { handleFilterMail, handleSearchMail } from "../utils/filterFunctions";
 import styles from "../Styles/mailList.module.css";
 import { capitalFirst } from "../utils/commonFunctions";
-import FullMail from "./FullMail";
 
 function MailListing() {
   const StoreState = useSelector(mailsStateVal);
@@ -35,6 +34,7 @@ function MailListing() {
       }
     }
   }, [location.pathname, location.search, StoreState.mails]);
+  
 
 
   const handleOpenMail =(mail) => {

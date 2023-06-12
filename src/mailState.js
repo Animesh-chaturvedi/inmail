@@ -8,6 +8,7 @@ export const mailsSlice = createSlice({
             mailGroups:{}
         },
         isLoading: false,
+        isError:false,
     },
     reducers:{
         getMailsFetch: (state) => {
@@ -19,6 +20,7 @@ export const mailsSlice = createSlice({
         },
         getMailsFailure: (state) => {
             state.isLoading = false;
+            state.isError = true;
         },
     }
 })

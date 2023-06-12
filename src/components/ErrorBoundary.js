@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector } from "react-redux";
+import { mailsStateVal } from "../mailState";
 
 const ErrorBoundary = ({ children }) => {
   const [hasError, setHasError] = useState(false);
+  const StoreState = useSelector(mailsStateVal);
+  useEffect(() => {
+    if(StoreState.isError){
+      setHasError(true)
+    }
+  },[StoreState])
 
   useEffect(() => {
-    
     const handleErrors = (error, errorInfo) => {
       setHasError(true);
     };
