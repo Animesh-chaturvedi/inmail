@@ -10,7 +10,7 @@ const SearchBar = ({ history }) => {
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       redirectToSearch();
-      setSearchTerm('')
+      // setSearchTerm('')
     }
   };
 
