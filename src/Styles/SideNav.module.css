@@ -12,8 +12,8 @@
   font-size: 40px;
   line-height: 48px;
   font-weight: 800;
-  text-align: center;
-  margin: 2rem 0rem;
+  /* text-align: center; */
+  margin: 2rem 1.6rem;
   background: linear-gradient(to right, #ab56ec, #2849e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

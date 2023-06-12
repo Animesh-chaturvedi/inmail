@@ -30,7 +30,7 @@
    max-height: 20px;
   }
   .backIcon{
-    padding: 8px;
+    padding: 0px;
     border-radius: 25px;
     &:hover{
         background-color: #5622ff;
@@ -65,7 +65,7 @@
   .subject{
     font-size: 20px;
     line-height: 24px;
-    margin: 2rem .5rem;
+    margin: 1rem 0rem;
     font-weight: 600;
     font-size: 20px;
   }
@@ -79,5 +79,5 @@
     color: white;
     background-color: #5622ff;
     font-weight: 500;
-    margin: 2rem 0.5rem;
+    margin: 2rem 0rem;
   }

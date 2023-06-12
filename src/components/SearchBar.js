@@ -17,6 +17,8 @@ const SearchBar = ({ history }) => {
   const redirectToSearch = () => {
     if (searchTerm.trim() !== '') {
       Navigate(`/search?term=${encodeURIComponent(searchTerm)}`);
+    }else{
+      Navigate("/all")
     }
   };
 

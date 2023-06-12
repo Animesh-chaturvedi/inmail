@@ -8,6 +8,7 @@
     max-height: 42px;
     @media (max-width:500px) {
         width: inherit;
+        margin-left: 10px;
     }
 }
 .searchInput{
@@ -15,10 +16,10 @@
     line-height: inherit;
     flex: 1;
     border: none;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 10px;
     font-size:16px;
     letter-spacing: .25px;
-    font-weight: 600;
+    /* font-weight: 600; */
     border-radius: 10px;
 }
 .searchButton{
