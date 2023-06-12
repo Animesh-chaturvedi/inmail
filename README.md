@@ -2,15 +2,15 @@
 This is a simple mail inbox application built with React, Redux, and Redux Saga. It allows users to view and filter their mails based on different tags.
 
 # H3 Features
-1.List all mails with the inbox tag as the default view.
-2.Open and view the body of each mail.
-3.Apply filters using tags such as inbox, draft, spam, and trash.
-4.View all mails regardless of tags.
-5.Implement a word search functionality with a direct URL to search results.
-6.Retain the applied filter when the user reloads the page.
-7.Data is fetched from the https://run.mocky.io/v3/15a3a1c3-1cda-4409-b1b1-2f39f5f25123.
-8.No signup/login 
-9.Cutom CSS is used throughout the project.
+1. List all mails with the inbox tag as the default view.
+2. Open and view the body of each mail.
+3. Apply filters using tags such as inbox, draft, spam, and trash.
+4. View all mails regardless of tags.
+5. Implement a word search functionality with a direct URL to search results.
+6. Retain the applied filter when the user reloads the page.
+7. Data is fetched from the https://run.mocky.io/v3/15a3a1c3-1cda-4409-b1b1-2f39f5f25123.
+8. No signup/login 
+9. Cutom CSS is used throughout the project.
 React, Redux, Redux Saga and React Router are used.
 
 
