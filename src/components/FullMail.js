@@ -1,17 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../Styles/mailBody.module.css";
 import { capitalFirst } from "../utils/commonFunctions";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { useSelector } from "react-redux";
+import { mailsStateVal } from "../mailState";
 
 const FullMail = () => {
+  const StoreState = useSelector(mailsStateVal);
   const location = useLocation();
   const navigate = useNavigate();
-  const { mail, name } = location.state.info;
+  const [mailbody, setMailBody] = useState({})
+  const userArr = ["Animesh", "Piyush", "Rishabh"];
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = getMonthName(currentDate.getMonth());
   const day = currentDate.getDate().toString().padStart(2, "0");
+
+  useEffect(() => {
+    const pathName = location.pathname.split('/')[2]
+    if(location.state == null){
+   const interm = StoreState.mails.mails.reduce((acc, crr) => {
+        if(crr.id == pathName){
+          acc = crr
+        }
+        return acc;
+      },{})
+      setMailBody(interm)
+    }else{
+      setMailBody(location?.state?.info.mail)
+    }
+  },[StoreState])
 
   function getMonthName(monthNumber) {
     const date = new Date();
@@ -33,9 +52,9 @@ const FullMail = () => {
         </div>
         <div className={styles.topCont}>
           <div className={styles.nameTag}>
-            <div className={styles.name}>{name}</div>
-            <div className={`${styles.tag} ${styles[mail.tag + "-tag"]}`}>
-              {capitalFirst(mail.tag)}
+            <div className={styles.name}>{userArr[mailbody.userId]}</div>
+            <div className={`${styles.tag} ${styles[mailbody.tag + "-tag"]}`}>
+              { mailbody.tag && capitalFirst(mailbody.tag)}
             </div>
           </div>
           <div className={styles.date}>
@@ -43,8 +62,8 @@ const FullMail = () => {
           </div>
         </div>
         <div>
-          <div className={styles.subject}>{mail.subject}</div>
-          <div>{mail.body}</div>
+          <div className={styles.subject}>{mailbody.subject}</div>
+          <div>{mailbody.body}</div>
           <div>
             <button className={styles.replyButton}>Reply</button>
           </div>
